@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Food Recipes</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+    <div class="udana">
+
+        <video autoplay loop muted plays-inline class="about-video">
+        <source src="Nilo.mp4" type="video/mp4">
+       
+      </video>
+
+
+  <div class="navbar">
+      <div class="icon">
+          <h2 class="logo">NiloRecipes</h2>
+      </div>
+
+      <div class="menu">
+          <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="service.html">SERVICE</a></li>
+              <li><a href="recipes.html">RECIPES</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+              <li><a href="Login.html">Login</a></li>
+          </ul>
+      </div>
+
+      <div class="search">
+          <input class="srch" type="search" name="" placeholder="Type To text">
+          <a href="recipes.html"> <button class="btn">Search</button></a>
+      </div>
+
+  </div> 
+  <div class="content">
+      <h1>ABOUT<br><span>US</span></h1>
+      <p class="par">Welcome to NiloRecipes, your go-to destination for discovering delicious recipes and culinary 
+        inspiration! At NiloRecipes, we believe that great food brings people together, and our mission 
+        is to make cooking an enjoyable and accessible experience for everyone, whether you're a 
+        seasoned chef or just starting in the kitchen.Founded with a passion for food and a love for 
+        sharing culinary secrets, NiloRecipes offers a wide range of recipes that are carefully curated 
+        to satisfy every palate. From quick and easy weekday dinners to indulgent desserts and 
+        everything in between, our collection is designed to inspire creativity and bring joy to your
+        cooking journey.</p>
+
+          <button class="cn"><a href="#">JOIN WITH US</a></button>
+
+    
+          
+
+          </div>
+              </div>
+          </div>
+  </div>
+</div>
+
+<div id="loading">
+    <img src="load.gif" alt="Loading...">
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        $("body").css("display", "none");
+        $("#loading").hide(); // Ensure the loading screen is hidden initially
+
+        $("body").fadeIn(500);
+
+        $("a").click(function(event) {
+            event.preventDefault();
+            let linkLocation = this.href;
+
+            $("#loading").show(); // Show the loading screen
+            $("body").fadeOut(500, function() {
+                window.location = linkLocation;
+            });
+        });
+    });
+</script>
+
+
+
+
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

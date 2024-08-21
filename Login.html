@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Recipes</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="nishi">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="login.mp4" type="video/mp4">
+        </video>
+
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Nilo Recipes</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="recipes.html">RECIPES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="login.html"> <button class="btn">Search</button></a>
+            </div>
+        </div>     
+        
+
+
+
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+                <form action="login.php" method="post">
+                <div class="textbox">
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+            </form>
+        
+       
+       
+       
+       
+       
+       
+       
+       
+        </div>
+
+    
+
+    </div>
+
+
+    <div id="loading">
+        <img src="load.gif" alt="Loading...">
+    </div>
+    
+    
+    <script>
+        $(document).ready(function() {
+            $("body").css("display", "none");
+            $("#loading").hide(); // Ensure the loading screen is hidden initially
+    
+            $("body").fadeIn(500);
+    
+            $("a").click(function(event) {
+                event.preventDefault();
+                let linkLocation = this.href;
+    
+                $("#loading").show(); // Show the loading screen
+                $("body").fadeOut(500, function() {
+                    window.location = linkLocation;
+                });
+            });
+        });
+    </script>
+    
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
